@@ -11,7 +11,7 @@ function _update_osh_update() {
 }
 
 function _upgrade_osh() {
-  env BASH=$OSH sh $OSH/tools/upgrade.sh
+  env BASH=$OSH sh $OSH/tools/upgrade_no_git.sh
   # update the osh file
   _update_osh_update
 }
@@ -25,9 +25,6 @@ fi
 # Cancel upgrade if the current user doesn't have write permissions for the
 # oh-my-bash directory.
 [[ -w "$OSH" ]] || return 0
-
-# Cancel upgrade if git is unavailable on the system
-which git >/dev/null || return 0
 
 if mkdir "$OSH/log/update.lock" 2>/dev/null; then
   if [ -f ~/.osh-update ]; then

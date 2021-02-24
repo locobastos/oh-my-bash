@@ -80,10 +80,6 @@ main() {
 
   printf "${BLUE}Using the Oh My Bash template file and adding it to ~/.bashrc${NORMAL}\n"
   cp $OSH/templates/bashrc.osh-template $HOME/.bashrc
-  sed "/^export OSH=/ c\\
-export OSH=$OSH
-  " $HOME/.bashrc > $HOME/.bashrc-ombtemp
-  mv -f $HOME/.bashrc-ombtemp $HOME/.bashrc
 
   # MOTD message :)
   printf '%s' "$GREEN"

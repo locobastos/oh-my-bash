@@ -54,7 +54,7 @@ fi
 umask g-w,o-w
 
 printf "${BLUE}Downloading Oh My Bash...${NORMAL}\n"
-curl -fsSLN https://github.com/locobastos/oh-my-bash/archive/master.zip -o oh-my-bash-master.zip
+curl -fsSLN https://github.com/locobastos/oh-my-bash/archive/master.zip -o $HOME/oh-my-bash-master.zip
 
 # Checks the installed dependancies
 hash unzip >/dev/null 2>&1 || {
@@ -63,7 +63,7 @@ hash unzip >/dev/null 2>&1 || {
 }
 
 cd $HOME
-unzip -qq oh-my-bash-master.zip
+unzip -qq $HOME/oh-my-bash-master.zip
 mv $HOME/oh-my-bash-master $OSH
 
 printf "${BLUE}Looking for an existing bash config...${NORMAL}\n"

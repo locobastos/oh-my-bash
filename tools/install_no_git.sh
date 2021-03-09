@@ -63,7 +63,7 @@ hash unzip >/dev/null 2>&1 || {
 }
 
 cd $HOME
-unzip -qq $HOME/oh-my-bash-master.zip
+unzip -qq $HOME/oh-my-bash-master.zip -d $HOME
 mv $HOME/oh-my-bash-master $OSH
 
 printf "${BLUE}Looking for an existing bash config...${NORMAL}\n"

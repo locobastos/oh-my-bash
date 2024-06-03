@@ -8,6 +8,24 @@ Once installed, your terminal shell will become the talk of the town or your mon
 
 Finally, you'll begin to get the sort of attention that you have always felt you deserved. ...or maybe you'll use the time that you're saving to start flossing more often.
 
+## Differences between this fork and the official repo
+
+This fork does one thing: It allow you to install Oh-My-Bash without git.
+
+You will find a new script to do this for you: tools/install_no_git.sh
+
+#### via curl
+
+```shell
+bash -c "$(curl -fsSLN https://raw.githubusercontent.com/locobastos/oh-my-bash/master/tools/install_no_git.sh)"
+```
+
+#### via wget
+
+```shell
+bash -c "$(wget https://raw.githubusercontent.com/ohmybash/ohlocobastos/master/tools/install_no_git.sh -O -)"
+```
+
 ## Getting Started
 
 ### Prerequisites

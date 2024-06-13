@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#! bash oh-my-bash.module
 
-function prompt_command() {
+function _omb_theme_PROMPT_COMMAND {
 
   HOST_IP=$(ifconfig | grep 'inet '| grep -v '127.0.0.1' | xargs | cut -d' ' -f2)
   PS1=""
@@ -16,4 +16,4 @@ function prompt_command() {
 
 }
 
-safe_append_prompt_command prompt_command
+_omb_util_add_prompt_command _omb_theme_PROMPT_COMMAND
